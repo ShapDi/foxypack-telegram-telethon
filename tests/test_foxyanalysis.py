@@ -31,6 +31,7 @@ def test_telegram_public_channel_link():
     assert analysis.type_content == TelegramEnum.channel.value
     assert analysis.code == "telegram"
 
+
 @pytest.mark.analysis
 def test_telegram_private_channel_link():
     analyzer = FoxyTelegramAnalysis()

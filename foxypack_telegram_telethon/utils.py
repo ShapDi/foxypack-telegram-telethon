@@ -7,8 +7,6 @@ def as_telegram_analysis(
     analysis: AnswersAnalysis,
 ) -> TelegramAnswersAnalysis:
     if not isinstance(analysis, TelegramAnswersAnalysis):
-        raise TypeError(
-            "Analysis is not TelegramAnswersAnalysis"
-        )
+        raise TypeError("Analysis is not TelegramAnswersAnalysis")
 
     return analysis

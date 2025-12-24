@@ -13,9 +13,7 @@ def test_account_entity(test_account):
     telegram_stat = FoxyTelegramStat(entities_controller=controller)
     telegram_stat_two = FoxyTelegramStat(entities_controller=controller)
 
-    analysis = FoxyTelegramAnalysis().get_analysis(
-        "https://t.me/howdyho_official/8585"
-    )
+    analysis = FoxyTelegramAnalysis().get_analysis("https://t.me/howdyho_official/8585")
 
     stat_one = telegram_stat.get_statistics(analysis)
     stat_two = telegram_stat_two.get_statistics(analysis)

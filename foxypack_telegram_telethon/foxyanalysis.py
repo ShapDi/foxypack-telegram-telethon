@@ -43,7 +43,7 @@ class FoxyTelegramAnalysis(FoxyAnalysis):
 
         m = re.match(r"https?://t\.me/([^/]+)(?:/(\d+))?", link)
         if not m:
-            return ''
+            return ""
 
         channel, post_id = m.group(1), m.group(2)
         return f"{channel}/{post_id}" if post_id else channel

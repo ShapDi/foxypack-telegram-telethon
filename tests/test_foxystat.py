@@ -13,9 +13,7 @@ def test_get_statistics_public_post(test_account):
     stat = FoxyTelegramStat(entities_controller=controller)
     stat_two = FoxyTelegramStat(entities_controller=controller)
 
-    analysis = FoxyTelegramAnalysis().get_analysis(
-        "https://t.me/howdyho_official/8585"
-    )
+    analysis = FoxyTelegramAnalysis().get_analysis("https://t.me/howdyho_official/8585")
 
     stat_one = stat.get_statistics(analysis)
     stat_two_result = stat_two.get_statistics(analysis)
@@ -25,6 +23,7 @@ def test_get_statistics_public_post(test_account):
     assert stat_one.text == stat_two_result.text
     assert stat_one.analysis_status == stat_two_result.analysis_status
 
+
 def test_get_statistics_public_channel(test_account):
     controller = EntitiesController()
     controller.add_entity(test_account)
@@ -32,9 +31,7 @@ def test_get_statistics_public_channel(test_account):
     stat = FoxyTelegramStat(entities_controller=controller)
     stat_two = FoxyTelegramStat(entities_controller=controller)
 
-    analysis = FoxyTelegramAnalysis().get_analysis(
-        "https://t.me/howdyho_official"
-    )
+    analysis = FoxyTelegramAnalysis().get_analysis("https://t.me/howdyho_official")
 
     stat_one = stat.get_statistics(analysis)
     stat_two_result = stat_two.get_statistics(analysis)
